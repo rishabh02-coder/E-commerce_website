@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shoe Store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-color: #2c5282;
+            --secondary-color: #e53e3e;
+            --dark-bg: #1a1a1a;
+            --light-bg: #f7fafc;
+            --text-color: #2d3748;
+        }
+
+        body {
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background-color: var(--dark-bg);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('https://images.unsplash.com/photo-1542291026-7eec264c27ff');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-image {
+            width: 200px;
+            height: 200px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .product-card:hover .product-image {
+            transform: rotateY(360deg);
+        }
+
+        .buy-button {
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #1a365d;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+         .products {
+        text-align: center;
+        padding: 2rem;
+        background-color: var(--light-bg);
+    }
+
+    .product-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .product-card {
+        background: white;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+        width: 250px;
+    }
+
+    .product-card:hover {
+        transform: scale(1.05);
+    }
+
+    .product-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .product-card h3 {
+        margin-top: 10px;
+        color: var(--text-color);
+    }
+
+    .product-card p {
+        color: var(--secondary-color);
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .product-card button {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 10px;
+        transition: background 0.3s;
+    }
+
+    .product-card button:hover {
+        background-color: var(--secondary-color);
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">ShoePalace</div>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#product">Products</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Step into Greatness</h1>
+            <p>Discover our collection of premium footwear</p>
+        </div>
+    </section>
+
+    <section class="featured">
+        <h2 class="section-title" style="text-align:center; padding:20px;">Featured Products</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa" class="product-image">
+                <h3 class="product-title">Nike Air Max</h3>
+                <p class="product-price">$129.99</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5" class="product-image">
+                <h3 class="product-title">Jordan Retro</h3>
+                <p class="product-price">$199.99</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329" class="product-image">
+                <h3 class="product-title">Adidas Ultraboost</h3>
+                <p class="product-price">$159.99</p>
+                <button class="buy-button">Add to Cart</button>
+                
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa" class="product-image">
+                <h3 class="product-title">Nike Air Max</h3>
+                <p class="product-price">$129.99</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5" class="product-image">
+                <h3 class="product-title">Jordan Retro</h3>
+                <p class="product-price">$199.99</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329" class="product-image">
+                <h3 class="product-title">Adidas Ultraboost</h3>
+                <p class="product-price">$159.99</p>
+                <button class="buy-button">Add to Cart</button>
+                
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa" class="product-image">
+                <h3 class="product-title">Nike Air Max</h3>
+                <p class="product-price">$129.99</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5" class="product-image">
+                <h3 class="product-title">Jordan Retro</h3>
+                <p class="product-price">$199.99</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329" class="product-image">
+                <h3 class="product-title">Adidas Ultraboost</h3>
+                <p class="product-price">$159.99</p>
+                <button class="buy-button">Add to Cart</button>
+                
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1595341888016-9a664f7c52d3" alt="Shoe 1">
+                <h3>Sport Runner</h3>
+                <p>$99.99</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1600181951686-b259d1d60d63" alt="Shoe 2">
+                <h3>Casual Sneakers</h3>
+                <p>$79.99</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1514995669114-6081e934b693" alt="Shoe 3">
+                <h3>Classic Loafers</h3>
+                <p>$89.99</p>
+                <button>Buy Now</button>
+            </div>
+            
+        </div>
+        
+    </section>
+</body>
+</html>

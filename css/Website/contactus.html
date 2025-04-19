@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            background-color: #1e3a8a;
+            overflow: hidden;
+        }
+        
+        /* Rotating Shoe Background */
+        .bg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .bg-container-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .shoe {
+            position: absolute;
+            width: 500px;
+            height: auto;
+            animation: rotateShoe 10s linear infinite;
+            opacity: 0.6;
+        }
+        @keyframes rotateShoe {
+            from { transform: rotate(0deg) scale(1.2); }
+            to { transform: rotate(180deg) scale(1.2); }
+        }
+        .shoe-1 {
+            position: absolute;
+            width: 500px;
+            height: auto;
+            animation: rotateShoe-1 10s linear infinite;
+            opacity: 0.6;
+        }
+        @keyframes rotateShoe-1 {
+            from { transform: rotate(0deg) scale(1.2); }
+            to { transform: rotate(-180deg) scale(1.2); }
+        }
+        
+        .contact-container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 400px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+        
+        h2 {
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+        input::placeholder, textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        button {
+            background: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background: #e63946;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-container">
+        <img src="https://static.nike.com/a/images/w_1280,q_auto,f_auto/50544d3c-3be0-4451-9691-702f6800b0c2/air-jordan-1-true-blue-dz5485-410.jpg" class="shoe" alt="Nike Shoe">
+    </div>
+    <div class="bg-container-1">
+        <img src="https://static.nike.com/a/images/w_1280,q_auto,f_auto/50544d3c-3be0-4451-9691-702f6800b0c2/air-jordan-1-true-blue-dz5485-410.jpg" class="shoe-1" alt="Nike Shoe">
+    </div>
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Fill out the form below.</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>
